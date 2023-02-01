@@ -4,6 +4,7 @@ import PlaceItem from '../components/PlaceItem'
 
 
 const PlaceList = props =>{
+  console.log(props.items)
     if (props.items.length === 0) {
         return (
           <div className="place-list center">
@@ -22,12 +23,12 @@ const PlaceList = props =>{
                 <PlaceItem
                 key={place.id}
                 id={place.id}
-                image= {props.image}
-                title={props.title}
-                description={props.description}
-                address={props.address}
-                creatorId={props.creator}
-                coordinates={props.location}
+                image= {place.imageUrl}
+                title={place.title}
+                description={place.description}
+                address={place.address}
+                creatorId={place.creator}
+                coordinates={place.location}
 
                 />
             ))
